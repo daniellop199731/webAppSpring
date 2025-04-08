@@ -6,7 +6,9 @@
     <title th:text="${tittle}"></title>
 </head>
 <body>
-    <h1 th:text="${user.userName}"></h1>
-    <h1 th:text="${user.userLastname}"></h1>
+    <li th:if="${user.userName != null}" th:text="${user.userName}"></li>
+    <li th:if="${user.userLastname != null}" th:text="${user.userLastname}"></li>
+    <li th:if="${user.userEmail != null}" th:text="${user.userEmail}"></li>
+    <li th:if="${user.userEmail == null}" th:text="${'No tiene correo'}"></li>
 </body>
 </html>

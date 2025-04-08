@@ -24,6 +24,7 @@ public class UserController {
     @GetMapping("/detailsWithObjUser")
     public String detailsWithObjUser(Model model) {
         User user = new User("Daniel OBJ", "Lopez OBJ");
+        //user.setUserEmail("correo@correo.com");
         model.addAttribute("tittle", "Hola Mundo Spring boot");
         model.addAttribute("user", user);
         return "detailsWithObjUser";
