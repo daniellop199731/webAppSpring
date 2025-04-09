@@ -1,7 +1,6 @@
 package com.example.webapp.webappspring.controllers;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -11,8 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.webapp.webappspring.models.User;
 import com.example.webapp.webappspring.models.dto.UserDto;
-
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @org.springframework.web.bind.annotation.RestController
@@ -63,7 +60,7 @@ public class RestController {
         users.add(user3);
 
         //Otra forma de llenar una List
-        List<User> users2 = Arrays.asList(user, user2, user3);
+        //List<User> users2 = Arrays.asList(user, user2, user3);
 
         return users;
     }
