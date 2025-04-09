@@ -1,6 +1,7 @@
 package com.example.webapp.webappspring.controllers;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
@@ -37,7 +38,14 @@ public class UserController {
     @GetMapping("/detailsListOfUsers")
     public String detailsListOfUsers(ModelMap model) {
 
-        List<User> users = new ArrayList<>();
+        User user = new User("Daniel", "Lopez");
+        user.setUserEmail("correo1@correo.com");
+        User user2 = new User("Andres", "Guzman");
+        user2.setUserEmail("correo2@correo.com");
+        User user3 = new User("Camila", "Montoya");
+        user3.setUserEmail("correo3@correo.com");
+        List<User> users = Arrays.asList(user, user2, user3);
+        
 
         model.addAttribute("users", users);
 
