@@ -27,6 +27,7 @@ public class RequestParamsController {
     }
 
     @GetMapping("/request")
+    //http://localhost:8081/api/params/request?message=Hola que tal&code=117
     public ParamDto reques(HttpServletRequest request) {
         ParamDto param = new ParamDto();
         try{
